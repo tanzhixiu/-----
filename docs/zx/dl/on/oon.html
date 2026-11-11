@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简易灯箱画廊</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            width: 800px;
+            height: 600px;
+            background-color: rgb(110, 196, 167);
+            margin: 0 auto;    /*水平居中显示*/
+            text-align: center;
+            border: 1px solid rgb(110, 196, 167);
+        }
+        h1 {
+            /* line-height: 100px; */
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+        img {
+            width: 100px;
+        }
+        ul li {
+            height: 90px;
+            list-style: none;
+            display: inline-block;    /*行内块*/
+            margin: 0 5px;
+            text-align: center;
+        }
+        ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+        ul li a:hover {
+            text-decoration: underline;
+            border-bottom: 4px solid red;
+        }
+        marquee {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>灯箱画廊</h1>
+        <hr>
+        <marquee behavior="alternate" direction="" scrollamount="5"
+        onmouseover="this.stop()" onmouseout="this.start()">
+            <ul>
+                <li><a href="images/t1.jpg" target="bigpic"><span>T1</span><br><img src="images/t1.jpg" alt=""></a></li>
+                <li><a href="images/t2.jpg" target="bigpic"><span>T2</span><br><img src="images/t2.jpg" alt=""></a></li>
+                <li><a href="images/t3.jpg" target="bigpic"><span>T3</span><br><img src="images/t3.jpg" alt=""></a></li>
+                <li><a href="images/t4.jpg" target="bigpic"><span>T4</span><br><img src="images/t4.jpg" alt=""></a></li>
+                <li><a href="images/t5.jpg" target="bigpic"><span>T5</span><br><img src="images/t5.jpg" alt=""></a></li>
+                <li><a href="images/t6.jpg" target="bigpic"><span>T6</span><br><img src="images/t6.jpg" alt=""></a></li>
+            </ul>
+        </marquee>
+        <iframe src="" frameborder="0" name="bigpic" width="640px" height="360px"></iframe>
+    </div>
+</body>
+</html>

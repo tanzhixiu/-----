@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>留言板</title>
+<style>
+body { font-family: "微软雅黑", sans-serif; font-size: 14px; background: #fff; margin: 20px; }
+.container { width: 700px; margin: 0 auto; border: 1px solid #ccc; padding: 15px; background: #f0f8ff; }
+.header { display: flex; justify-content: space-between; border-bottom: 1px solid #99c; padding-bottom: 8px; margin-bottom: 15px; }
+.header .title { font-size: 20px; font-weight: bold; color: #003399; }
+.header .sub { font-size: 14px; color: #003399; }
+table.form { width: 100%; border-collapse: collapse; }
+table.form td { padding: 6px; vertical-align: middle; }
+table.form td.label { text-align: right; width: 80px; color: #333; }
+input[type="text"], textarea, select { border: 1px solid #999; padding: 2px; }
+textarea { width: 400px; height: 100px; }
+.note { font-size: 12px; color: #333; margin: 10px 0; line-height: 1.6; }
+.buttons { text-align: center; margin: 15px 0; }
+.buttons input { padding: 3px 20px; margin: 0 10px; }
+.footer { font-size: 12px; color: #0033cc; margin-top: 15px; line-height: 1.8; }
+.tag { background: #ffcccc; padding: 1px 5px; border: 1px solid #f99; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="title">留言板</div>
+    <div class="sub">科技工作者建言</div>
+  </div>
+  <form method="post" action="">
+    <table class="form">
+      <tr>
+        <td class="label">姓 名：</td>
+        <td><input type="text" name="username" size="20"></td>
+      </tr>
+      <tr>
+        <td class="label">电子邮件：</td>
+        <td><input type="text" name="email" size="20"></td>
+      </tr>
+      <tr>
+        <td class="label">分 类：</td>
+        <td>
+          <input type="radio" name="type" value="建议" checked>科技工作者建言
+          <input type="radio" name="type" value="保密">保密
+          <input type="radio" name="type" value="保密">保密
+          <select name="msgtype">
+            <option>留言类型：</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td class="label">留 言：</td>
+        <td><textarea name="message"></textarea></td>
+      </tr>
+    </table>
+    <div class="note">注：如果您的留言不便公开，请选择"保密"选项，提交后可向系统反馈您的留言编号，查询密码和您的姓名查询回复。</div>
+    <div class="buttons">
+      <input type="submit" value="提交">
+      <input type="reset" value="重置">
+    </div>
+    <div class="footer">
+      · 请遵守国家有关法律、法规，尊重网上道德，承担一切因您的行为而直接或间接引起的法律责任。<br>
+      · 本网站拥有管理笔名和留言的一切权利。
+    </div>
+  </form>
+</div>
+</body>
+</html>

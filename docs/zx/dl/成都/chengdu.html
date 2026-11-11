@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成都旅游 - 天府之国</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+        /* 导航栏 */
+        nav {
+            background-color: #c81623;
+            color: #fff;
+            padding: 16px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 24px;
+            font-size: 16px;
+        }
+        /* Banner 纯色版本，无图片 */
+        .banner {
+            height: 400px;
+            background-color: #f7d046;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+        .banner h1 {
+            font-size: 48px;
+            margin-bottom:12px;
+        }
+        .banner p {
+            font-size: 20px;
+        }
+        /* 通用板块 */
+        section {
+            padding: 60px 50px;
+        }
+        .section-title{
+            text-align:center;
+            font-size:32px;
+            margin-bottom:40px;
+            color:#c81623;
+        }
+        /* 景点卡片 */
+        .spot-wrap{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap:24px;
+        }
+        .food-wrap{
+            display:grid;
+            grid-template-columns: repeat(3,1fr);
+            gap:24px;
+        }
+        .card{
+            border:1px solid #eee;
+            border-radius:12px;
+            overflow:hidden;
+            box-shadow: 0 2px 8px #00000015;
+            transition: 0.3s;
+        }
+        /* 悬浮加分效果 */
+        .card:hover{
+            transform: translateY(-6px);
+            box-shadow: 0 6px 16px #00000022;
+        }
+        .card-img{
+            height:160px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            /* 冰粉空卡片的占位底色 */
+            background-color: #eee;
+        }
+        .card-img img{
+            width:100%;
+            height:100%;
+            object-fit: cover;
+            display:block;
+        }
+        .card-text{
+            padding:16px;
+        }
+        .card-text h3{
+            margin-bottom:8px;
+        }
+        /* 页脚 */
+        footer{
+            background:#333;
+            color:#fff;
+            text-align:center;
+            padding:24px;
+        }
+        /* ===== 移动端适配【加分项】===== */
+        @media (max-width:768px) {
+            .spot-wrap{
+                grid-template-columns: repeat(2,1fr);
+            }
+            .food-wrap{
+                grid-template-columns: repeat(2,1fr);
+            }
+            nav{
+                padding:16px 20px;
+            }
+            .banner h1{
+                font-size:32px;
+            }
+            section{
+                padding:30px 20px;
+            }
+        }
+        @media (max-width:480px) {
+            .spot-wrap,.food-wrap{
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--导航栏-->
+    <nav>
+        <div class="logo">成都旅游</div>
+        <div class="nav-link">
+            <a href="#spot">景点推荐</a>
+            <a href="#food">特色美食</a>
+            <a href="#about">关于成都</a>
+        </div>
+    </nav>
+    <!--横幅Banner（纯色）-->
+    <div class="banner">
+        <h1>遇见成都，慢享天府</h1>
+        <p>一座来了就不想走的城市</p>
+    </div>
+    <!--景点板块-->
+    <section id="spot">
+        <h2 class="section-title">热门景点</h2>
+        <div class="spot-wrap">
+            <div class="card">
+                <div class="card-img" style="background-image:url('图片相关 (1).png')"></div>
+                <div class="card-text">
+                    <h3>宽窄巷子</h3>
+                    <p>老成都的烟火街巷，青砖黛瓦，感受市井古韵。</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img" style="background-image:url('图片相关 (2).png')"></div>
+                <div class="card-text">
+                    <h3>大熊猫繁育基地</h3>
+                    <p>打卡国宝大熊猫，软萌治愈，成都必来。</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img" style="background-image:url('图片相关 (3).png')"></div>
+                <div class="card-text">
+                    <h3>锦里古街</h3>
+                    <p>夜晚灯火璀璨，古色古香，小吃云集。</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img" style="background-image:url('图片相关 (4).png')"></div>
+                <div class="card-text">
+                    <h3>都江堰</h3>
+                    <p>千年水利工程，世界文化遗产，山水壮阔。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--美食板块-->
+    <section id="food" style="background:#f9f9f9;">
+        <h2 class="section-title">成都特色美食</h2>
+        <div class="food-wrap">
+            <div class="card">
+                <div class="card-img" style="background-image:url('图片相关 (5).png')"></div>
+                <div class="card-text">
+                    <h3>牛油火锅</h3>
+                    <p>麻辣鲜香，热辣滚烫，成都美食代表。</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img" style="background-image:url('图片相关 (6).png')"></div>
+                <div class="card-text">
+                    <h3>麻辣兔头</h3>
+                    <p>地道川味小吃，越啃越香。</p>
+                </div>
+            </div>
+            <div class="card">
+                 <div class="card-img" style="background-image:url('图片相关 (7).png')"></div>
+                 <div class="card-text">
+                    <h3>红糖冰粉</h3>
+                    <p>清爽解辣，甜而不腻，夏日标配。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--关于板块-->
+    <section id="about">
+        <h2 class="section-title">关于成都</h2>
+        <p style="max-width:900px;margin:0 auto;font-size:18px;line-height:1.8;color:#444;">
+            成都，四川省省会，别称蓉城、锦城。这里生活节奏舒缓，茶文化浓厚，历史悠久。
+            既有千年古迹，也有新潮商圈；既有麻辣美食，也有悠闲茶馆。欢迎来到天府之国！
+        </p>
+    </section>
+    <footer>
+        <p>成都旅游介绍网站 | 前端课程作业</p>
+    </footer>
+</body> 
+</html>

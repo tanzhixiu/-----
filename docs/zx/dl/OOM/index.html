@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- 适配移动端视口 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人名片</title>
+    <!-- CSS样式与HTML结构分离 -->
+    <style>
+        /* 全局样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 页面主体：实现卡片垂直+水平居中，背景浅灰柔和底色 */
+        body {
+            min-height: 100vh;
+            background-color: #f5f7fa;
+            /* flex布局居中 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+
+        /* 名片卡片容器 */
+        .card {
+            width: 340px;
+            padding: 40px 30px;
+            background-color: #ffffff;
+            /* 要求12px圆角 */
+            border-radius: 12px;
+            /* 柔和阴影 */
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            /* 设置过渡动画，用于hover上浮效果 */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* 鼠标悬停：卡片轻微上浮，阴影加深 */
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+        }
+
+        /* 圆形头像样式 */
+        .avatar {
+            width: 100px;
+            height: 100px;
+            /* 圆形 */
+            border-radius: 50%;
+            /* 占位头像背景，可替换src图片 */
+            background-color: #cad8f0;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            border: 3px solid #e8edf5;
+        }
+
+        /* 姓名样式 */
+        .name {
+            font-size: 22px;
+            color: #2d3748;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        /* 职位样式 */
+        .position {
+            font-size: 15px;
+            color: #718096;
+            margin-bottom: 24px;
+        }
+
+        /* 联系方式区域 */
+        .contact {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* 联系项 */
+        .contact-item {
+            font-size: 14px;
+            color: #4a5568;
+        }
+
+        .contact-item a {
+            color: #3182ce;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- 名片卡片主体结构 -->
+    <div class="card">
+        <!-- 圆形头像，替换src即可使用自己的图片 -->
+        <img class="avatar" src="image.jpg" >
+        <!-- 姓名 -->   
+        <div class="name">张三</div>
+        <!-- 职位 -->
+        <div class="position">前端开发工程师</div>
+        <!-- 联系方式区域 -->
+        <div class="contact">
+            <div class="contact-item">📧 邮箱：zhangsan@example.com</div>
+            <div class="contact-item">📱 电话：138‑0000‑0000</div>
+            
+        </div>
+    </div>
+</body>
+</html>

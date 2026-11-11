@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>京东商品导购</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;}
+        .container{
+            width:740px;
+            height:620px;
+            border-radius:15px;
+            margin:30px auto; /*浏览器正中*/
+            padding:20px;
+        }
+        h1{
+            text-align:center;
+            color:red;
+            margin-bottom:20px;
+        }
+        .goods-wrap{
+            display:grid;
+            grid-template-columns:1fr 1fr 1fr;
+            gap:15px;
+        }
+        .goods-item{
+            border:10px groove #9966cc; /*凹槽groove样式*/
+            box-shadow:0 0 8px #ccc;
+            text-align:center;
+            padding:8px;
+        }
+        /*鼠标悬停：虚线 #9999cc*/
+        .goods-item:hover{
+            border-style:dashed;
+            border-color:#9999cc;
+        }
+        .price{
+            color:red;
+            font-weight:bold;
+            margin:4px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>京东商品导购</h1>
+        <div class="goods-wrap">
+            <div class="goods-item">
+                <p>麦包包 Vinhas单肩包</p>
+                <p>领券满减</p>
+                <p class="price">¥128</p>
+                <img src="image5-2-1.jpg" alt="单肩包" width="120">
+            </div>
+            <div class="goods-item">
+                <p>优购.adidas休闲鞋</p>
+                <p>限时抢购</p>
+                <p class="price">¥365</p>
+                <img src="image5-2-2.jpg" alt="adidas鞋" width="120">
+            </div>
+            <div class="goods-item">
+                <p>优购.NB女子复古鞋</p>
+                <p>限时抢购</p>
+                <p class="price">¥299</p>
+                <img src="image5-2-3.jpg" alt="NB鞋" width="120">
+            </div>
+            <div class="goods-item">
+                <p>优购.VANS女子硫化鞋</p>
+                <p>限时抢购</p>
+                <p class="price">¥280</p>
+                <img src="image5-2-4.jpg" alt="vans鞋" width="120">
+            </div>
+            <div class="goods-item">
+                <p>优购.匡威经典低帮鞋</p>
+                <p>限时抢购</p>
+                <p class="price">¥199</p>
+                <img src="image5-2-5.jpg" alt="匡威鞋" width="120">
+            </div>
+            <div class="goods-item">
+                <p>优购.Belle羊皮女鞋</p>
+                <p>限时抢购</p>
+                <p class="price">¥398</p>
+                <img src="image5-2-6.jpg" alt="百丽女鞋" width="120">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
